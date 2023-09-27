@@ -11,7 +11,7 @@ import UI5Carousel from "../components/carousel";
 import UI5Input from "../components/input";
 import UI5Button from "../components/button";
 
-export const BUILDER_PUBLIC_API_KEY = process.env.BUILDER_PUBLIC_API_KEY || ""; // <-- Add your Builder public API key here
+export const BUILDER_PUBLIC_API_KEY = import.meta.env.PUBLIC_API_KEY || ""; // <-- Add your Builder public API key here
 export const BUILDER_MODEL = "page";
 
 // Find these components in the Custom Components
