@@ -5,7 +5,7 @@ export interface UI5HeaderProps {
   title: string;
 }
 
-const UI5Header = component$((props: UI5HeaderProps) => {
+export const UI5Header = component$((props: UI5HeaderProps) => {
   console.log(props.title);
   useVisibleTask$(async () => {
     if (isServer) {
