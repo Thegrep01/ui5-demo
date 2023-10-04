@@ -6,7 +6,6 @@ export interface UI5CarouselProps {
 }
 
 const UI5Carousel = component$((props: UI5CarouselProps) => {
-  console.log(props.images);
   useVisibleTask$(async () => {
     if (isServer) {
       return;

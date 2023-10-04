@@ -5,8 +5,7 @@ export interface UI5CarouselProps {
   images: { image: string }[];
 }
 
-const UI5Input = component$((props: UI5CarouselProps) => {
-  console.log(props.images);
+const UI5Input = component$(() => {
   useVisibleTask$(async () => {
     if (isServer) {
       return;
