@@ -1,36 +1,15 @@
 import { component$ } from "@builder.io/qwik";
 import { routeLoader$ } from "@builder.io/qwik-city";
 import {
-  fetchOneEntry,
-  getBuilderSearchParams,
-  type RegisteredComponent,
   Content,
+  getBuilderSearchParams,
+  fetchOneEntry,
 } from "@builder.io/sdk-qwik";
-import UI5Header from "../components/header";
-import UI5Carousel from "../components/carousel";
-import UI5Input from "../components/input";
-import UI5Button from "../components/button";
-import UI5SideNavigation from "../components/side-navigation";
+import { CUSTOM_COMPONENTS } from "~/routes";
 
 export const BUILDER_PUBLIC_API_KEY = "1081fc3ead3540d68ef4330cdac286ad";
-export const BUILDER_MODEL = "page";
+export const BUILDER_MODEL = "component-page";
 
-// Find these components in the Custom Components
-// section of the Insert tab of the Visual Editor.
-// You can also turn on Components-Only Mode to limit
-// editing to only these components.
-// https://www.builder.io/c/docs/guides/components-only-mode
-export const CUSTOM_COMPONENTS: RegisteredComponent[] = [
-  UI5Header,
-  UI5Carousel,
-  UI5Input,
-  UI5Button,
-  UI5SideNavigation,
-];
-
-// Use Qwik City's `useBuilderContent` to get your content from Builder.
-// `routeLoader$()` takes an async function to fetch content
-// from Builder with `fetchOneEntry()`.
 export const useBuilderContent = routeLoader$(async ({ url, error }) => {
   const isPreviewing = url.searchParams.has("builder.preview");
 

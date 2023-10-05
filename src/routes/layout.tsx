@@ -3,8 +3,6 @@ import { routeLoader$ } from "@builder.io/qwik-city";
 import type { RequestHandler } from "@builder.io/qwik-city";
 
 import styles from "./styles.css?inline";
-import { UI5SideNavigation } from "~/components/side-navigation";
-import { UI5Header } from "~/components/header";
 
 export const onGet: RequestHandler = async ({ cacheControl }) => {
   // Control caching for this request for best performance and to reduce hosting costs:
@@ -27,14 +25,9 @@ export default component$(() => {
   useStyles$(styles);
   return (
     <div class="flex flex-col h-screen">
-      <UI5Header title="Demo" />
-      <div class="flex h-screen">
-        {/* @ts-ignore */}
-        <UI5SideNavigation />
-        <main class="flex-1">
-          <Slot />
-        </main>
-      </div>
+      <main>
+        <Slot />
+      </main>
     </div>
   );
 });
