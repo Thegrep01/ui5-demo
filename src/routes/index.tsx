@@ -11,6 +11,8 @@ import UI5Carousel from "../components/carousel";
 import UI5Input from "../components/input";
 import UI5Button from "../components/button";
 import UI5SideNavigation from "../components/side-navigation";
+import ElementPreview from "../components/element-preview";
+import UI5Tabs from "../components/tabs";
 
 export const BUILDER_PUBLIC_API_KEY = "1081fc3ead3540d68ef4330cdac286ad";
 export const BUILDER_MODEL = "page";
@@ -26,6 +28,8 @@ export const CUSTOM_COMPONENTS: RegisteredComponent[] = [
   UI5Input,
   UI5Button,
   UI5SideNavigation,
+  ElementPreview,
+  UI5Tabs,
 ];
 
 // Use Qwik City's `useBuilderContent` to get your content from Builder.
