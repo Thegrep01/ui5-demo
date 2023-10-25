@@ -52,8 +52,8 @@ export default component$(() => {
       `https://4c06-95-67-30-96.ngrok-free.app/api/components`,
       options
     );
-    const data = await response.json();
-    return data;
+    const res = await response.json();
+    return res.data;
   });
 
   // RenderContent uses `content` to
